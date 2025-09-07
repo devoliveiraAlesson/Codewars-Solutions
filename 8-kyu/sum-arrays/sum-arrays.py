@@ -1,2 +1,1 @@
-def sum_array(a):
-    return sum(a)
+sum_array = sum
