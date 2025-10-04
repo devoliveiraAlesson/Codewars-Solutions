@@ -2,5 +2,5 @@
 select
   id,
   name,
-  position("," in characteristics) as comma
+  position(',' in characteristics) as comma
 from monsters
