@@ -1,4 +1,3 @@
- 
 select
   age,
   count(*) as people_count
