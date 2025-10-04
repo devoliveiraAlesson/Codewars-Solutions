@@ -1,4 +1,4 @@
  
 def is_palindrome(s):
-    return s.lower() == revesed(s.lower())
+    return s.lower() == reversed(s.lower())
 ​
