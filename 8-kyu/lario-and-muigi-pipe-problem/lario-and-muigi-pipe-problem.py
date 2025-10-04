@@ -1,3 +1,3 @@
  
 def pipe_fix(nums):
-    return [ range(min(nums), max(nums)+1) ]
+    return range(min(nums), max(nums)+1) 
