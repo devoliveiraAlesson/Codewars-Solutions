@@ -1,3 +1,5 @@
  
 ​
-  SELECT REGEXP_REPLACE(text, '[aeiouAEIOU]', ' ', 'g') as results from random_strings
+  SELECT
+  REGEXP_REPLACE(text, '[aeiouAEIOU]', ' ', 'g') as results
+  from random_string
