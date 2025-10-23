@@ -1,4 +1,3 @@
- 
 with filmes as (
 select
   film_id,
