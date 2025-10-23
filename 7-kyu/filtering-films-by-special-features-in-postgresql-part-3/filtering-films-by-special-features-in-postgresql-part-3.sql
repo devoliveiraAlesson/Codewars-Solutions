@@ -1,3 +1,4 @@
+ 
 with filmes as (
 select
   film_id,
@@ -14,4 +15,4 @@ from film
 )
 ​
 select * from filmes
-where special_features not Null
+where special_features Null
