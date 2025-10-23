@@ -15,4 +15,4 @@ from film
 )
 ​
 select * from filmes
-where special_features Null
+where special_features = Null
