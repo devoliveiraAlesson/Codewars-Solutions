@@ -1,4 +1,3 @@
- 
 with filmes as (
 select
   film_id,
@@ -15,4 +14,5 @@ from film
 )
 ​
 select * from filmes
-where special_features = Null
+where 'Deleted Scenes' = any(special_features) or 'Behind the Scenes'= any(special_features)
+order by title asc, film_id asc
