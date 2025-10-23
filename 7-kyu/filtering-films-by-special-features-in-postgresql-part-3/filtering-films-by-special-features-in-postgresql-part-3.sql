@@ -1,18 +1,13 @@
-with filmes as (
+​
 select
   film_id,
   title,
+  special_features
   
-  case
-    when 'Commentaries' = any(special_features) then NUll
-    when 'Deleted Scenes' = any(special_features) and 'Behind the Scenes'= any(special_features) then NUll
-    when 'Deleted Scenes' = any(special_features) or 'Behind the Scenes'= any(special_features) then special_features
-    else NUll end
-    as special_features
-​
 from film
-)
 ​
-select * from filmes
-where 'Deleted Scenes' = any(special_features) or 'Behind the Scenes'= any(special_features)
+where array['Behind the Scenes','Deleted Scenes'] && special_features
+      and not special_features @> array['Behind the Scenes','Deleted Scenes']
+      and not array['Commentaries'] && special_features
+​
 order by title asc, film_id asc
