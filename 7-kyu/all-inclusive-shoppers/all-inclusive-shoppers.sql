@@ -1,4 +1,3 @@
- 
 select
 ​
 o.user_id,
